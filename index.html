@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffd84d">
+  <meta name="description" content="Hungry? Indecisive? Four quick questions. Three delicious dinner ideas. Let’s decide your dinner.">
+  <title>Decide My Dinner — Less thinking. More eating.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-screen="landing">
+  <a class="skip-link" href="#main">Skip to dinner</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Decide My Dinner home"><span class="brand-mark" aria-hidden="true">››</span><span>DECIDE MY<br>DINNER<span class="brand-period">.</span></span></a>
+    <span class="header-note">LESS THINKING. <span>MORE EATING.</span></span>
+    <span class="header-next" aria-hidden="true">NEXT → NEXT → NEXT</span>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="landing" class="screen landing" aria-labelledby="landing-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> THE DAILY DINNER DILEMMA, SOLVED.</span>
+        <h1 id="landing-title">WHAT SHOULD<br>I COOK <span class="tonight">TONIGHT<span class="question-mark">?</span></span></h1>
+        <p class="hero-description">Hungry brain. Empty ideas.<br>Give us 20 seconds. We’ve got dinner.</p>
+        <button class="button primary start-button" id="start">LET’S DECIDE <span aria-hidden="true">↗</span></button>
+        <p class="microcopy"><span>4 quick questions</span><b aria-hidden="true">→</b><span>3 tasty possibilities</span><b aria-hidden="true">→</b><span>zero stress</span></p>
+      </div>
+      <figure class="hero-art">
+        <img class="food-map" src="assets/food-world-map.jpg" alt="A food world map with a burger in America, tacos in Mexico, pasta in Europe, roti and sabji in India, and dumplings in East Asia" width="1536" height="1024" fetchpriority="high">
+        <figcaption>A world of flavor. One easy decision.</figcaption>
+      </figure>
+      <ol class="how-it-works" aria-label="Your dinner in three steps">
+        <li><span class="step-number">01</span><span>Tell us your mood.</span><b aria-hidden="true">NEXT →</b></li>
+        <li><span class="step-number">02</span><span>Meet your dinner.</span><b aria-hidden="true">NEXT →</b></li>
+        <li><span class="step-number">03</span><span>Get cooking.</span><b aria-hidden="true">LET’S GO →</b></li>
+      </ol>
+    </section>
+    <section id="quiz" class="screen quiz" aria-labelledby="question-title" hidden>
+      <div class="quiz-top"><button id="back" class="text-button">← BACK</button><div id="progress" class="progress" aria-label="Question 1 of 4"></div><span id="step-count" class="eyebrow">01 / 04</span></div>
+      <div class="question-layout"><div class="question-copy"><p id="question-kicker" class="eyebrow"></p><h2 id="question-title" tabindex="-1"></h2><p id="question-description"></p><div id="choices" class="choices"></div><p class="quiz-tip">Go with your gut. You can always go back.</p></div><div class="quiz-art" aria-hidden="true"><span id="quiz-art-caption" class="round-caption">GOOD FOOD.<br>GOOD MOOD.</span><div class="quiz-food"><img id="quiz-food-image" src="assets/ramen-hero.jpg" alt=""></div><span class="quiz-spark">✳</span></div></div>
+    </section>
+    <section id="cooking" class="screen cooking" aria-labelledby="cooking-title" hidden><div class="cooking-symbol" aria-hidden="true">✳</div><p class="eyebrow">A LITTLE OF THIS. A LITTLE OF THAT.</p><h2 id="cooking-title" tabindex="-1">OKAY OKAY…<br>WE’RE COOKING 🔥</h2><div class="loading-track" aria-hidden="true"><span></span></div></section>
+    <section id="results" class="screen results" aria-labelledby="results-title" hidden><div class="results-heading"><div><p class="eyebrow">THE DINNER DILEMMA? HANDLED.</p><h2 id="results-title" tabindex="-1">TONIGHT’S PICKS <span>🍽️</span></h2></div><p>Three good ideas.<br>One very happy stomach.</p></div><div id="preference-summary" class="preference-summary"></div><div id="featured"></div><div class="or-maybe"><h3>OR MAYBE…</h3><span>GOOD OPTIONS. TOUGH CALL.</span></div><div id="alternatives" class="alternatives"></div><div class="results-actions"><button id="reroll" class="button primary">NAH, TRY AGAIN <span aria-hidden="true">🎲</span></button><button id="change-answers" class="text-button">CHANGE MY ANSWERS <span aria-hidden="true">↗</span></button><p>Same mood. Fresh possibilities.</p></div></section>
+    <noscript><p class="noscript">A little JavaScript is needed to decide your dinner. Please enable it and reload.</p></noscript>
+  </main>
+  <footer><span>MADE FOR HUNGRY, INDECISIVE HUMANS.</span><span>GOOD FOOD. <b>NO OVERTHINKING. →</b></span></footer>
+</body>
+</html>
